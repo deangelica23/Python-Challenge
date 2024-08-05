@@ -1,4 +1,7 @@
 # PyPoll
+
+#import modules
+
 import os
 
 import csv
@@ -7,9 +10,8 @@ csvpath = os.path.join("Resources", "election_data.csv")
 
 
 # In this Challenge, you are tasked with helping a small, rural town modernize its vote-counting process.
-# You will be given a set of poll data called election_data.csv. 
 # The dataset is composed of three columns: "Voter ID", "County", and "Candidate". 
-# Your task is to create a Python script that analyzes the votes and calculates each of the following values:
+
 
 total_votes = 0
 candidates_names = []
@@ -47,10 +49,6 @@ print(f"Total Votes: {total_votes}")
 print("----------------------------------")
 # A complete list of candidates who received votes
 
-#print(f"Candidates Names: {candidates_names}" )
-# for name in list_of_names:
-#     print(name)
-
 
 # The percentage of votes each candidate won
 
@@ -67,17 +65,12 @@ print("----------------------------------")
 winner = max(candidate_votes, key=candidate_votes.get)
 print(f"Winner: {winner}")
 print("----------------------------------")
-#         percentage_votes_won[candidate] = round(percentage, 3)
-# print(percentage_votes_won)
-
 
 
 # The total number of votes each candidate won
 
 # The winner of the election based on popular vote
 
-# winner = max(candidate_votes, key=candidate_votes.get)
-# print(f"Winner: {winner}")
 
 # # In addition, your final script should both print the analysis to the terminal and export a text file with the results.
 
@@ -88,8 +81,6 @@ with open(output_path, 'w') as file:
      file.write("-------------------------\n")
      file.write(f"Total Votes: {total_votes}\n")
      file.write("-------------------------\n")
-
-     #
      for result in results: 
           file.write(result + '\n')
           #file.write(results + '\n')
