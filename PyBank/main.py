@@ -35,6 +35,7 @@ with open(csvpath) as csvfile:
         date.append(row [0])
         total_months += 1
 
+
 for i , profit_loss in enumerate(profit_losses):
  
     if i < total_months - 1:
@@ -48,7 +49,7 @@ for i , profit_loss in enumerate(profit_losses):
 
 #average change
 average_change = round(sum(profit_losses_changes) / (total_months - 1), 2)
-print(len(profit_losses_changes))
+
 
 
 # The greatest increase in profits (date and amount) over the entire period
